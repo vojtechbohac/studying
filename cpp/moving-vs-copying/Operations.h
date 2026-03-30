@@ -2,6 +2,7 @@
 
 #include <string>
 #include <utility>
+#include <cstdint>
 
 /*
  *  Struct Members contains two members:
