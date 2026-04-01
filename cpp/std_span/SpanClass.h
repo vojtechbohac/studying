@@ -6,7 +6,7 @@
  *  std::span accepts any contiguous memory such as std::array or std::vector.
  *  It doesn't care where it gets the data from.
  *
- *  This is exceptionally great when we want to edit both an std::array and std::vector,
+ *  This is exceptionally great when we want to edit both a std::array and std::vector,
  *  as we can do it inside one single function while not making a copy at all.
  */
 template <typename T>
