@@ -48,10 +48,10 @@ public:
 
 
     /*
-     * 16 bytes on stack.
-     * Shared_ptr consists of 2x 8 bytes stored on STACK:
-     * - 8 byte pointer to the data on HEAP.
-     * - 8 byte pointer to the amount of pointers that are looking at the data.
+     *  16 bytes on stack.
+     *  Shared_ptr consists of 2x 8 bytes stored on STACK:
+     *  - 8 byte pointer to the data on HEAP.
+     *  - 8 byte pointer to the amount of pointers that are looking at the data.
      */
     std::shared_ptr<T> sPtr;
 
