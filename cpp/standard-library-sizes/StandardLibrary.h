@@ -53,7 +53,7 @@ public:
      *  - 8 byte pointer to the data on HEAP.
      *  - 8 byte pointer to the amount of pointers that are looking at the data.
      */
-    std::shared_ptr<T> sPtr;
+    std::shared_ptr<T> sPtr{};
 
     /*
      *  16 bytes on stack.
@@ -63,7 +63,7 @@ public:
      *
      *  Doesn't own anything as same as std::string_view.
      */
-    std::span<T> anyCM;
+    std::span<T> anyCM{};
 
     /*
      *  8 bytes on stack.
@@ -71,7 +71,7 @@ public:
      *  The difference is, it manages its memory so there are no memory leaks.
      *  - 8 byte pointer pointing to data.
      */
-    std::unique_ptr<T> ptr;
+    std::unique_ptr<T> ptr{};
 
     /*
      *  T bytes + ( 1 byte + appropriate padding).
@@ -80,5 +80,5 @@ public:
      *  - 1 byte holds a flag telling if we are holding T or std::nullopt_t.
      *  - additional padding to ensure std::optional is a suitable size for the CPU handling.
      */
-    std::optional<T> opt;
+    std::optional<T> opt{};
 };
